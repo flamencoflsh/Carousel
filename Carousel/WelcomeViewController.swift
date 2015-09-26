@@ -31,15 +31,23 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         // Get the current page based on the scroll offset
         var page : Int = Int(round(scrollView.contentOffset.x / 320))
-        
+    
         // Set the current page, so the dots will update
         pageControl.currentPage = page
         
         if page == 3
         {
-            pageControl.hidden = true
-            buttonsView.alpha = 1
+            UIView.animateWithDuration(0.2) { () -> Void in
+                self.pageControl.hidden = true
+                self.buttonsView.alpha = 1
+            }
+        }else if buttonsView.alpha == 1{
+                UIView.animateWithDuration(0.05) { () -> Void in
+                    self.pageControl.hidden = true
+                    self.buttonsView.alpha = 0
+                }
         }
+        
     }
 
     /*

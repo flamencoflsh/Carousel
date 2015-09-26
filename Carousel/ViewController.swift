@@ -12,14 +12,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var image1View: UIImageView!
-    var initialY: CGFloat!
+    var image1ViewCenter: CGPoint!
+    //var image1ViewInitialX: CGFloat!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
         scrollView.contentSize = CGSize(width:320, height:1136)
-        initialY = image1View.frame.origin.y
+        image1ViewCenter = image1View.center
+        //image1ViewInitialX = image1View.frame.origin.x
         
         
         
@@ -31,11 +33,37 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func scrollViewDidScroll(scrollView: UIScrollView!) {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
         
-        //image1View.transform = CGAffineTransformMakeTranslation(0, 200)
-        image1View.center.y = initialY + 100
+        // Get the offset as scrollview scrolls in the y direction
+        let currentOffset = scrollView.contentOffset.y
+        
+        // Calculate the final offset when fully scrolled
+        let finalOffset = scrollView.contentSize.height - scrollView.frame.height
+        
+        print("A: Current Offset \(currentOffset) Final Offset \(finalOffset)")
+        
+        // Set the distance you want the item to move
+        let translation = CGFloat(200)
+        
+        // Calculate how far you have scrolled as a percent of the total scroll
+        let percentScroll = currentOffset / finalOffset
+        
+        // Move the object based on the percentage you have scrolled
+        // Note: Add the difference to the object's initial position (set up top as an instance variable
+        // or the object will go zooming off the screen! :D
+        image1View.center.x = image1ViewCenter.x + percentScroll*translation
+       
+        //var photo1 = Photo(startPosition: CGPoint(0, 3
     }
    
 }
 
+//struct Photo{
+  //  startPostition: CGPoint()!
+  //  endPosition: CGPoint()!
+  //  startScale:
+  //  endScale:
+  //  startRotation:
+  //  endRotation:
+//}

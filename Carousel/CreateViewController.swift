@@ -76,6 +76,23 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        // Get the offset as scrollview scrolls in the y direction
+        let currentOffset = scrollView.contentOffset.y
+        
+        // Calculate the final offset when fully scrolled
+        let finalOffset = scrollView.contentSize.height - scrollView.frame.height
+        
+        print("B: Current Offset: \(currentOffset) Final Offset: \(finalOffset)")
+        
+        if currentOffset < -80{
+            dataView.endEditing(true)
+        }
+        
+    }
+
+    
     func keyboardWillHide(notification: NSNotification!) {
         var userInfo = notification.userInfo!
         

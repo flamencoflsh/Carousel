@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var defaults = NSUserDefaults.standardUserDefaults()
+
 func CGAffineTransformMakeDegreeRotation(rotation: CGFloat) -> CGAffineTransform {
     return CGAffineTransformMakeRotation(rotation * CGFloat(M_PI / 180))
 }

@@ -10,9 +10,17 @@ import UIKit
 
 class GetStartedViewController: UIViewController {
     
+    @IBOutlet weak var fullscreenCheckboxView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fullscreenCheckboxView.alpha = 0
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var fullscreen = defaults.objectForKey("viewed_fullscreen_photo") as! String
+        if fullscreen == "Y"{
+            print("fullscreen YES")
+            fullscreenCheckboxView.alpha = 1
+        }
         
              // Do any additional setup after loading the view.
     }

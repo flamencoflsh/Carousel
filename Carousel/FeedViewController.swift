@@ -8,15 +8,44 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var wheelView: UIImageView!
+    @IBOutlet weak var wheelAfterView: UIImageView!
+    var initialY: CGFloat!
+    @IBOutlet weak var completeCheckView: UIImageView!
+    @IBOutlet weak var bannerView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        wheelView.alpha = 0
+        wheelAfterView.alpha = 0
+        scrollView.delegate = self
+        initialY = scrollView.center.y
+        completeCheckView.alpha = 0
         scrollView.contentSize = imageView.image!.size
+
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var fullscreen = defaults.objectForKey("viewed_fullscreen_photo") as! String
+        if fullscreen == "Y"{
+            print("fullscreen YES")
+            
+            UIView.animateWithDuration(1) { () -> Void in
+                self.completeCheckView.alpha = 1
+            }
+            
+            delay(2, closure: { () ->
+                () in
+                
+                UIView.animateWithDuration(0.2) { () -> Void in
+                    self.completeCheckView.alpha = 0
+                }
+                
+            })
+            
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -26,6 +55,52 @@ class FeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didClickFullscreen(sender: AnyObject) {
+        
+        defaults.setObject("Y", forKey: "viewed_fullscreen_photo")
+        defaults.synchronize()
+    }
+    
+    @IBAction func didScrollWheel(sender: AnyObject) {
+        
+        wheelAfterView.alpha = 1
+        UIView.animateWithDuration(1) { () -> Void in
+            self.completeCheckView.alpha = 1
+        }
+
+        UIView.animateWithDuration(0.2, delay: 2, options: [], animations: { () -> Void in
+            self.completeCheckView.alpha = 0
+            
+        }) { (Bool) -> Void in
+            self.bannerView.hidden = true
+        }
+
+        
+        
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        // Get the offset as scrollview scrolls in the y direction
+        let currentOffset = scrollView.contentOffset.y
+        
+        // Calculate the final offset when fully scrolled
+        let finalOffset = scrollView.contentSize.height - scrollView.frame.height
+        
+        print("B: Current Offset \(currentOffset) Final Offset: \(finalOffset)")
+        
+        if currentOffset  > 10{
+            UIView.animateWithDuration(0.2) { () -> Void in
+                self.wheelView.alpha = 1
+            }
+        }else if currentOffset  < -10{
+            UIView.animateWithDuration(0.2) { () -> Void in
+                self.wheelView.alpha = 0
+            }
+        }
+        
+    }
+
 
     /*
     // MARK: - Navigation

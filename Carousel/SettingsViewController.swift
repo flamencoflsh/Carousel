@@ -17,6 +17,10 @@ class SettingsViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: imageView.image!.size.width, height: imageView.image!.size.height + 64)
 
+        //Undo User Defaults
+        defaults.setObject("N", forKey: "viewed_fullscreen_photo")
+        defaults.synchronize()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +28,7 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
