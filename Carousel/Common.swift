@@ -29,3 +29,8 @@ func convertValue(value: CGFloat, r1Min: CGFloat, r1Max: CGFloat, r2Min: CGFloat
     return value * ratio + r2Min - r1Min * ratio
 }
 
+func radian(value: CGFloat) -> CGFloat{
+    var angle =  CGFloat(value * CGFloat(M_PI/180))
+    return angle
+}
+
