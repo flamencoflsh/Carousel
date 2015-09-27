@@ -154,7 +154,7 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
         
         print("B: Current Offset: \(currentOffset) Final Offset: \(finalOffset)")
         
-        if currentOffset < -100{
+        if currentOffset < -50{
             loginView.endEditing(true)
         }
         

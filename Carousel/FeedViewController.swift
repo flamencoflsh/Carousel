@@ -29,14 +29,15 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
 
         var defaults = NSUserDefaults.standardUserDefaults()
         var fullscreen = defaults.objectForKey("viewed_fullscreen_photo") as! String
-        if fullscreen == "Y"{
+        var played = defaults.integerForKey("played_fullscreen_complete_check") as! Int
+        if fullscreen == "Y" && played != 1{
             print("fullscreen YES")
             
             UIView.animateWithDuration(1) { () -> Void in
                 self.completeCheckView.alpha = 1
             }
             
-            delay(2, closure: { () ->
+            delay(1, closure: { () ->
                 () in
                 
                 UIView.animateWithDuration(0.2) { () -> Void in
@@ -45,6 +46,8 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
                 
             })
             
+            defaults.setInteger(1, forKey: "played_fullscreen_complete_check")
+            defaults.synchronize()
         }
 
         // Do any additional setup after loading the view.
@@ -81,6 +84,9 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
+        let previousOffset = defaults.integerForKey("previousOffset")
+
+        
         // Get the offset as scrollview scrolls in the y direction
         let currentOffset = scrollView.contentOffset.y
         
@@ -89,11 +95,14 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
         
         print("B: Current Offset \(currentOffset) Final Offset: \(finalOffset)")
         
-        if currentOffset  > 10{
+        defaults.setInteger(Int(currentOffset), forKey: "previousOffset")
+        defaults.synchronize()
+        
+        if (previousOffset+Int(currentOffset)) > 40{
             UIView.animateWithDuration(0.2) { () -> Void in
                 self.wheelView.alpha = 1
             }
-        }else if currentOffset  < -10{
+        }else  {
             UIView.animateWithDuration(0.2) { () -> Void in
                 self.wheelView.alpha = 0
             }

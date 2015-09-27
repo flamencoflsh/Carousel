@@ -456,7 +456,7 @@
                                 <rect key="frame" x="7" y="17" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="RLo-Ic-CxM" kind="modal" animates="NO" id="jGj-vG-yFp"/>
+                                    <segue destination="hPU-jD-eNO" kind="modal" id="ajQ-yi-rbE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -465,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YqV-ns-aFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2410" y="2161"/>
+            <point key="canvasLocation" x="2389" y="2195"/>
         </scene>
         <!--Conversations View Controller-->
         <scene sceneID="7Sk-Wc-Mdh">
@@ -511,7 +511,7 @@
                                 <rect key="frame" x="11" y="25" width="31" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="RLo-Ic-CxM" kind="modal" animates="NO" id="geh-jL-YLb"/>
+                                    <segue destination="hPU-jD-eNO" kind="modal" id="7fP-XI-J24"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="checkbox_complete" id="8aO-6R-kJ4">
@@ -531,7 +531,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbG-sf-Wo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3568" y="2145"/>
+            <point key="canvasLocation" x="2826" y="2187"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wj0-ri-jQ6">
@@ -687,7 +687,7 @@
                                                         <rect key="frame" x="24" y="226" width="273" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="terms_text" id="9Gq-ah-Z2U">
                                                         <rect key="frame" x="8" y="264" width="320" height="33"/>
@@ -852,7 +852,8 @@
         <image name="welcome4" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jGj-vG-yFp"/>
-        <segue reference="6CK-5c-Xt5"/>
+        <segue reference="psE-XL-18H"/>
+        <segue reference="7fP-XI-J24"/>
+        <segue reference="BBI-zU-3s8"/>
     </inferredMetricsTieBreakers>
 </document>

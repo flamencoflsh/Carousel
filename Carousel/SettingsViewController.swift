@@ -19,6 +19,7 @@ class SettingsViewController: UIViewController {
 
         //Undo User Defaults
         defaults.setObject("N", forKey: "viewed_fullscreen_photo")
+        defaults.setInteger(0, forKey: "played_fullscreen_complete_check")
         defaults.synchronize()
         
         // Do any additional setup after loading the view.

@@ -86,7 +86,7 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
         
         print("B: Current Offset: \(currentOffset) Final Offset: \(finalOffset)")
         
-        if currentOffset < -80{
+        if currentOffset < -50{
             dataView.endEditing(true)
         }
         
