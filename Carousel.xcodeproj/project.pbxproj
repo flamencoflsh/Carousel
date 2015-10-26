@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403787871BBFA43100C8DFFA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403787861BBFA43100C8DFFA /* Common.swift */; settings = {ASSET_TAGS = (); }; };
 		403D89731BB6039700DE83F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403D89721BB6039700DE83F5 /* AppDelegate.swift */; };
 		403D89751BB6039700DE83F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403D89741BB6039700DE83F5 /* ViewController.swift */; };
 		403D89781BB6039700DE83F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403D89761BB6039700DE83F5 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		403D89881BB6039700DE83F5 /* CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403D89871BB6039700DE83F5 /* CarouselTests.swift */; };
 		403D89931BB6039800DE83F5 /* CarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403D89921BB6039800DE83F5 /* CarouselUITests.swift */; };
 		403D89A11BB6227800DE83F5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403D89A01BB6227800DE83F5 /* SignInViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		403D89A31BB6506E00DE83F5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403D89A21BB6506E00DE83F5 /* Common.swift */; settings = {ASSET_TAGS = (); }; };
 		403D89A51BB65FBD00DE83F5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403D89A41BB65FBD00DE83F5 /* WelcomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		403D89A71BB664CA00DE83F5 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403D89A61BB664CA00DE83F5 /* FeedViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		403D89A91BB6689C00DE83F5 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403D89A81BB6689C00DE83F5 /* ConversationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		403787861BBFA43100C8DFFA /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		403D896F1BB6039700DE83F5 /* Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403D89721BB6039700DE83F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		403D89741BB6039700DE83F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		403D89921BB6039800DE83F5 /* CarouselUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselUITests.swift; sourceTree = "<group>"; };
 		403D89941BB6039800DE83F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		403D89A01BB6227800DE83F5 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		403D89A21BB6506E00DE83F5 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		403D89A41BB65FBD00DE83F5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		403D89A61BB664CA00DE83F5 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		403D89A81BB6689C00DE83F5 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 			children = (
 				403D89721BB6039700DE83F5 /* AppDelegate.swift */,
 				403D89AC1BB66FC400DE83F5 /* SettingsViewController.swift */,
-				403D89A21BB6506E00DE83F5 /* Common.swift */,
+				403787861BBFA43100C8DFFA /* Common.swift */,
 				403D89741BB6039700DE83F5 /* ViewController.swift */,
 				403D89761BB6039700DE83F5 /* Main.storyboard */,
 				403D89B01BB6A89100DE83F5 /* TermsViewController.swift */,
@@ -286,10 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				403D89B31BB6B9F800DE83F5 /* GetStartedViewController.swift in Sources */,
-				403D89A31BB6506E00DE83F5 /* Common.swift in Sources */,
 				403D89A51BB65FBD00DE83F5 /* WelcomeViewController.swift in Sources */,
 				403D89AF1BB68A5300DE83F5 /* CreateViewController.swift in Sources */,
 				403D89A91BB6689C00DE83F5 /* ConversationsViewController.swift in Sources */,
+				403787871BBFA43100C8DFFA /* Common.swift in Sources */,
 				403D89B11BB6A89100DE83F5 /* TermsViewController.swift in Sources */,
 				403D89751BB6039700DE83F5 /* ViewController.swift in Sources */,
 				403D89731BB6039700DE83F5 /* AppDelegate.swift in Sources */,
@@ -418,6 +418,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -447,6 +448,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				"GCC_OPTIMIZATION_LEVEL[arch=*]" = 0;
 				INFOPLIST_FILE = Carousel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -522,6 +525,7 @@
 				403D89991BB6039800DE83F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		403D899A1BB6039800DE83F5 /* Build configuration list for PBXNativeTarget "CarouselTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +534,7 @@
 				403D899C1BB6039800DE83F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		403D899D1BB6039800DE83F5 /* Build configuration list for PBXNativeTarget "CarouselUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +543,7 @@
 				403D899F1BB6039800DE83F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

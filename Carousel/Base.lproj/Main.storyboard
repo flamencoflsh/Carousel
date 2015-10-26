@@ -551,65 +551,6 @@
             </objects>
             <point key="canvasLocation" x="162" y="406"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="L4a-Vf-PQI">
-            <objects>
-                <viewController id="FXz-1f-V7X" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="m47-a6-ZCm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro" id="wId-eM-qAe">
-                                <rect key="frame" x="0.0" y="-568" width="320" height="1136"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="screenshot2" id="oOx-Yb-J2a">
-                                <rect key="frame" x="2" y="5" width="317" height="556"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" id="c4h-YZ-JcS">
-                                <rect key="frame" x="49" y="176" width="150" height="149"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mKH-Dj-aAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-200" y="1377"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5tl-Of-Abm">
-            <objects>
-                <viewController id="wlh-SU-H0C" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h1j-Xz-ut5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="screenshot" id="maH-3Y-SF8">
-                                <rect key="frame" x="-1" y="3" width="320" height="563"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" id="XX3-k0-t2M">
-                                <rect key="frame" x="32" y="248" width="93" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="rPc-en-yab">
-                                <rect key="frame" x="-12" y="479" width="121" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8WC-TJ-lF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="151" y="1168"/>
-        </scene>
         <!--Terms View Controller-->
         <scene sceneID="BVK-mC-Ghz">
             <objects>
@@ -836,8 +777,6 @@
         <image name="login_form" width="320" height="113"/>
         <image name="login_text" width="320" height="70"/>
         <image name="nav_full" width="319" height="64"/>
-        <image name="screenshot" width="320" height="563"/>
-        <image name="screenshot2" width="317" height="556"/>
         <image name="scrubber" width="320" height="36"/>
         <image name="scrubberAfter" width="320" height="36"/>
         <image name="settings" width="320" height="695"/>
@@ -853,7 +792,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="psE-XL-18H"/>
-        <segue reference="7fP-XI-J24"/>
         <segue reference="BBI-zU-3s8"/>
+        <segue reference="7fP-XI-J24"/>
     </inferredMetricsTieBreakers>
 </document>
